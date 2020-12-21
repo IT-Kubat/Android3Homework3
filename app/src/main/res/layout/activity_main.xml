@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Bishkek, Kyrgyzstan"
+        android:textStyle="bold"
+        android:textSize="25sp"
+       app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сейчас"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textAllCaps="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_location"/>
+
+    <TextView
+        android:id="@+id/tv_current_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_current"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="70dp"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/tv_current_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_current_show"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="70dp"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tv_week"
+        android:text="На этой неделе"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_current_text"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="70dp"/>
+
+    <TextView
+        android:id="@+id/tv_today"
+        android:text="Сегодня"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textAllCaps="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tv_current"
+        app:layout_constraintTop_toBottomOf="@id/tv_location"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="70dp"/>
+
+    <TextView
+        android:id="@+id/tv_today_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tv_current_show"
+        app:layout_constraintTop_toBottomOf="@id/tv_today"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="65dp"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/tv_today_show_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tv_today_show"
+        app:layout_constraintTop_toBottomOf="@id/tv_today"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="40dp"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/tv_today_text_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintLeft_toRightOf="@id/tv_today_text_max"
+        app:layout_constraintTop_toBottomOf="@id/tv_today_show_min"/>
+
+    <TextView
+        android:id="@+id/tv_today_text_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tv_current_text"
+        app:layout_constraintTop_toBottomOf="@id/tv_today_show"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="50dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_week"/>
+
+    <TextView
+        android:id="@+id/tv_wind_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_wind"/>
+
+    <TextView
+        android:id="@+id/tv_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="90dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/tv_wind"
+        app:layout_constraintTop_toBottomOf="@id/tv_week"/>
+
+    <TextView
+        android:id="@+id/tv_pressure_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="100dp"
+        android:textSize="20sp"
+        android:textStyle="normal"
+       app:layout_constraintLeft_toRightOf="@id/tv_wind_show"
+        app:layout_constraintTop_toBottomOf="@id/tv_pressure"/>
+
+    <TextView
+        android:id="@+id/tv_humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="60dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_wind_show"/>
+
+    <TextView
+        android:id="@+id/tv_humidity_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="60dp"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_humidity"/>
+
+    <TextView
+        android:id="@+id/tv_sunrise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="60dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_humidity_show"/>
+
+    <TextView
+        android:id="@+id/tv_sunrise_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="60dp"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sunrise"/>
+
+
+    <TextView
+        android:id="@+id/tv_cloudiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/tv_humidity"
+        app:layout_constraintTop_toBottomOf="@id/tv_pressure_show"/>
+
+    <TextView
+        android:id="@+id/tv_cloudiness_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="110dp"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toRightOf="@id/tv_humidity_show"
+        app:layout_constraintTop_toBottomOf="@id/tv_cloudiness"/>
+
+    <TextView
+        android:id="@+id/tv_sunset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="80dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/tv_sunrise"
+        app:layout_constraintTop_toBottomOf="@id/tv_cloudiness_show"/>
+
+    <TextView
+        android:id="@+id/tv_sunset_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="90dp"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toRightOf="@id/tv_sunrise_show"
+        app:layout_constraintTop_toBottomOf="@id/tv_sunset"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
